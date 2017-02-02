@@ -10,7 +10,8 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rd /S /Q build && tsc"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,10 @@
   },
   "homepage": "https://github.com/naderio/nativescript-google-maps-utils#readme",
   "devDependencies": {
-    "tns-core-modules": "*",
+    "tns-core-modules": "^2.4.4",
     "typescript": "^1.8.10"
   },
   "dependencies": {
-    "nativescript-google-maps-sdk": "*"
+    "nativescript-google-maps-sdk": "newgerstas/nativescript-google-maps-sdk#f258291"
   }
 }
