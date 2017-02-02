@@ -1,48 +1,34 @@
-
 import * as utils from "utils/utils";
-
 import { MapView, Marker, Position } from "nativescript-google-maps-sdk"
+import { ClusterManager as ClusterManagerBase } from "./cluster-manager";
 
+export class ClusterManager extends ClusterManagerBase {
 
-const debugNull = function(...args: Array<any>): void { };
+  private android: any;
 
-function debugDefault(...args: Array<any>) {
-    args = args.map((value) => {
-        if (typeof value === 'object' && value) {
-            try {
-                value = JSON.stringify(value);
-            } catch (e) {
-                value = value.toString();
-            }
-        }
-        return value;
-    });
-    args.unshift('nativescript-socket.io');
-    console.log.apply(console, args);
-}
+  constructor(private mapView: MapView) {
+    super();
+    throw "IOS Cluster Manager is not implemented yet";
+  }
 
-let debug = debugNull;
+  public addMarkers(markers: Array<Marker>): void {
 
-export function enableDebug(debugFn: ((...args: Array<any>) => any) = debugDefault): void {
-    debug = debugFn;
-}
+  }
 
-export function disableDebug(): void {
-    debug = debugNull;
-}
+  public addMarker(marker: Marker): void {
 
+  }
 
-export function setupMarkerCluster(mapView: MapView, markers: Array<Marker>, options) {
-  debug('setupMarkerCluster');
-  // TODO
-}
+  public removeMarker(marker: Marker): void {
 
-export interface IHeatmapConfig {
+  }
 
-}
+  public clearMarkers(): void {
 
-export function setupHeatmap(mapView: MapView, positions: Array<Position>, config: IHeatmapConfig = null) : IHeatmapConfig {
-  debug('setupHeatmap');
-  // TODO
-  return config;
+  }
+
+  public refresh(): void {
+
+  }
+
 }

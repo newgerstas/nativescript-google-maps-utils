@@ -11,7 +11,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rd /S /Q build && tsc"
+    "clear": "if exist build rd build /q /s",
+    "build": "tsc",
+    "rebuild": "npm run clear && npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,7 @@
   "homepage": "https://github.com/naderio/nativescript-google-maps-utils#readme",
   "devDependencies": {
     "tns-core-modules": "^2.4.4",
-    "typescript": "^1.8.10"
+    "typescript": "^2.1.4"
   },
   "dependencies": {
     "nativescript-google-maps-sdk": "newgerstas/nativescript-google-maps-sdk#f258291"
