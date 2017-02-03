@@ -2,15 +2,12 @@ declare var java, com;
 
 import * as utils from "utils/utils";
 import { MapView, Position } from "nativescript-google-maps-sdk"
-import { HeatmapManager as HeatmapManagerBase, HeatmapOptions } from "./heatmap-manager";
 
-export class HeatmapManager extends HeatmapManagerBase {
+export class HeatmapManager {
 
   private android: any;
 
   constructor(private mapView: MapView) {
-    super();
-
     this.android = new com.google.maps.android.heatmaps.HeatmapTileProvider.Builder().build();
     mapView.gMap.addTileOverlay(new com.google.android.gms.maps.model.TileOverlayOptions().tileProvider(this.android));
   }

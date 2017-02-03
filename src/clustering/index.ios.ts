@@ -1,34 +1,32 @@
 import * as utils from "utils/utils";
 import { MapView, Marker, Position } from "nativescript-google-maps-sdk"
-import { ClusterManager as ClusterManagerBase } from "./cluster-manager";
 
-export class ClusterManager extends ClusterManagerBase {
+export class ClusterManager {
 
   private android: any;
 
   constructor(private mapView: MapView) {
-    super();
     throw "IOS Cluster Manager is not implemented yet";
   }
 
-  public addMarkers(markers: Array<Marker>): void {
-
+  public addMarkers(markers: Array<Marker>): ClusterManager {
+    throw "IOS Cluster Manager is not implemented yet";
   }
 
-  public addMarker(marker: Marker): void {
-
+  public addMarker(marker: Marker): ClusterManager {
+    throw "IOS Cluster Manager is not implemented yet";
   }
 
-  public removeMarker(marker: Marker): void {
-
+  public removeMarker(marker: Marker): ClusterManager {
+    throw "IOS Cluster Manager is not implemented yet";
   }
 
-  public clearMarkers(): void {
-
+  public clearMarkers(): ClusterManager {
+    throw "IOS Cluster Manager is not implemented yet";
   }
 
-  public refresh(): void {
-
+  public refresh(): ClusterManager {
+    throw "IOS Cluster Manager is not implemented yet";
   }
 
 }
