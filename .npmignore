@@ -1,6 +1,4 @@
 demo/
-*.ts
-!index.d.ts
+src/
 *.map
-*.json
 *.log
